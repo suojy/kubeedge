@@ -21,9 +21,9 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"k8s.io/klog"
-
 	"github.com/gorilla/websocket"
+	"k8s.io/klog/v2"
+
 	"github.com/kubeedge/kubeedge/pkg/stream"
 )
 

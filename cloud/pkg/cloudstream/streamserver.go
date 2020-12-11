@@ -27,7 +27,7 @@ import (
 
 	"github.com/emicklei/go-restful"
 	"k8s.io/apimachinery/pkg/util/httpstream"
-	"k8s.io/klog"
+	"k8s.io/klog/v2"
 
 	"github.com/kubeedge/kubeedge/cloud/pkg/cloudstream/config"
 	"github.com/kubeedge/kubeedge/pkg/stream/flushwriter"
@@ -82,7 +82,7 @@ func (s *StreamServer) installDebugHandler() {
 		To(s.getMetrics))
 	s.container.Add(ws)
 
-	// metrics api is widely used for Promethus
+	// metrics api is widely used for Prometheus
 	ws = new(restful.WebService)
 	ws.Path("/metrics")
 	ws.Route(ws.GET("").

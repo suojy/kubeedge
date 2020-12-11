@@ -23,9 +23,9 @@ import (
 	"net"
 	"strings"
 
-	"k8s.io/klog"
-
 	"github.com/emicklei/go-restful"
+	"k8s.io/klog/v2"
+
 	"github.com/kubeedge/kubeedge/pkg/stream"
 )
 

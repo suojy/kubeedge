@@ -48,7 +48,7 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	utilfeature "k8s.io/apiserver/pkg/util/feature"
 	runtimeapi "k8s.io/cri-api/pkg/apis/runtime/v1alpha2"
-	"k8s.io/klog"
+	"k8s.io/klog/v2"
 	podutil "k8s.io/kubernetes/pkg/api/v1/pod"
 	podshelper "k8s.io/kubernetes/pkg/apis/core/pods"
 	v1qos "k8s.io/kubernetes/pkg/apis/core/v1/helper/qos"
@@ -568,7 +568,10 @@ func (e *edged) GenerateRunContainerOptions(pod *v1.Pod, container *v1.Container
 	if err != nil {
 		return nil, nil, err
 	}*/
-	opts := kubecontainer.RunContainerOptions{}
+	opts, err := e.containerManager.GetResources(pod, container)
+	if err != nil {
+		return nil, nil, err
+	}
 
 	hostname, hostDomainName, err := e.GeneratePodHostNameAndDomain(pod)
 	if err != nil {
@@ -612,7 +615,7 @@ func (e *edged) GenerateRunContainerOptions(pod *v1.Pod, container *v1.Container
 		}
 	}
 
-	return &opts, nil, nil
+	return opts, nil, nil
 }
 
 // GetPodDNS returns DNS settings for the pod.

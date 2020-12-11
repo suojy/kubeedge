@@ -576,9 +576,6 @@ github.com/paypal/gatt/linux/gioctl
 github.com/paypal/gatt/linux/socket
 github.com/paypal/gatt/linux/util
 github.com/paypal/gatt/xpc
-# github.com/pborman/uuid v1.2.0
-## explicit
-github.com/pborman/uuid
 # github.com/peterbourgon/diskv v2.0.1+incompatible
 github.com/peterbourgon/diskv
 # github.com/pkg/errors v0.9.1
@@ -606,7 +603,6 @@ github.com/prometheus/procfs/internal/util
 ## explicit
 github.com/sailorvii/modbus
 # github.com/satori/go.uuid v1.2.0
-## explicit
 github.com/satori/go.uuid
 # github.com/seccomp/libseccomp-golang v0.9.1
 github.com/seccomp/libseccomp-golang
@@ -1302,10 +1298,8 @@ k8s.io/gengo/generator
 k8s.io/gengo/namer
 k8s.io/gengo/parser
 k8s.io/gengo/types
-# k8s.io/klog v1.0.0 => k8s.io/klog v0.4.0
+# k8s.io/klog/v2 v2.2.0 => k8s.io/klog/v2 v2.2.0
 ## explicit
-k8s.io/klog
-# k8s.io/klog/v2 v2.2.0
 k8s.io/klog/v2
 # k8s.io/kube-openapi v0.0.0-20200805222855-6aeccd4b50c6
 ## explicit
@@ -1670,7 +1664,7 @@ sigs.k8s.io/yaml
 # k8s.io/csi-translation-lib v0.0.0 => k8s.io/csi-translation-lib v0.0.0-20190718190424-bef8d46b95de
 # k8s.io/gengo v0.0.0 => k8s.io/gengo v0.0.0-20190327210449-e17681d19d3a
 # k8s.io/heapster => k8s.io/heapster v1.2.0-beta.1
-# k8s.io/klog => k8s.io/klog v0.4.0
+# k8s.io/klog/v2 => k8s.io/klog/v2 v2.2.0
 # k8s.io/kube-aggregator v0.0.0 => k8s.io/kube-aggregator v0.0.0-20190718184434-a064d4d1ed7a
 # k8s.io/kube-controller-manager v0.0.0 => k8s.io/kube-controller-manager v0.0.0-20190718190030-ea930fedc880
 # k8s.io/kube-openapi v0.0.0 => k8s.io/kube-openapi v0.0.0-20190718094010-3cf2ea392886

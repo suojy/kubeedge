@@ -28,10 +28,9 @@ import (
 
 	"github.com/emicklei/go-restful"
 	"github.com/gorilla/websocket"
-	"k8s.io/klog"
+	"k8s.io/klog/v2"
 
 	hubconfig "github.com/kubeedge/kubeedge/cloud/pkg/cloudhub/config"
-	"github.com/kubeedge/kubeedge/cloud/pkg/cloudstream/config"
 	streamconfig "github.com/kubeedge/kubeedge/cloud/pkg/cloudstream/config"
 	"github.com/kubeedge/kubeedge/pkg/stream"
 )
@@ -138,7 +137,7 @@ func (s *TunnelServer) Start() {
 	}
 
 	tunnelServer := &http.Server{
-		Addr:    fmt.Sprintf(":%d", config.Config.TunnelPort),
+		Addr:    fmt.Sprintf(":%d", streamconfig.Config.TunnelPort),
 		Handler: s.container,
 		TLSConfig: &tls.Config{
 			ClientCAs:    pool,
